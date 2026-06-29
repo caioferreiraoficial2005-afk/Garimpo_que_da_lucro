@@ -151,7 +151,20 @@
     }
     .launch-pill svg { width: 11px; height: 11px; }
     #hero .sub { font-size: clamp(1rem, 2.8vw, 1.15rem); color: var(--z400); max-width: 480px; margin: 16px auto 0; line-height: 1.6; }
-    .ebook-cover { width: 100%; max-width: 420px; margin: 40px auto 0; border-radius: 10px; box-shadow: 0 32px 80px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.04); display: block; }
+    .vsl-wrap {
+      width: 100%;
+      margin: 40px auto 0;
+      border-radius: var(--rl);
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.07), 0 32px 80px rgba(0,0,0,0.85);
+      background: #000;
+      position: relative;
+    }
+    .vsl-wrap video {
+      width: 100%;
+      display: block;
+      border-radius: var(--rl);
+    }
 
     /* ─── DOR ─── */
     #dor { background: #060606; border-top: 1px solid var(--brd); border-bottom: 1px solid var(--brd); }
@@ -368,7 +381,11 @@
       </span>
     </div>
 
-    <img src="assets/images/9a78766a-bf5d-48c3-ac07-a68787975a49.jpg" alt="Capa Garimpo que Da Lucro" class="ebook-cover" />
+    <div class="vsl-wrap">
+      <video controls playsinline preload="metadata">
+        <source src="assets/videos/continue_o_script.mp4" type="video/mp4" />
+      </video>
+    </div>
   </div>
 </section>
 
