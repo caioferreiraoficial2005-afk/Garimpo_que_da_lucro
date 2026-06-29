@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Garimpo que Da Lucro — Compre Barato, Venda com Margem Real</title>
-  <meta name="description" content="O guia completo para comprar produtos baratos e revender com lucro na OLX e marketplaces. Por apenas R$17." />
+  <title>Garimpo que Da Lucro — Fature R$2.000+ por mes na OLX</title>
+  <meta name="description" content="Aprenda a comprar barato e revender com margem real na OLX. Fature no minimo R$2.000 por mes. Por apenas R$17." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -27,6 +27,7 @@
       --green-dark: #0E7C4A;
       --green-dim:  rgba(22,166,95,0.12);
       --gold:       #E0A92E;
+      --red:        #E03A2E;
       --white:      #ffffff;
       --z400:       #a1a1aa;
       --z500:       #71717a;
@@ -46,10 +47,10 @@
     h2 { font-size: clamp(1.6rem, 4.5vw, 2.3rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; }
     h3 { font-size: 0.95rem; font-weight: 700; }
 
-    /* keyword highlights */
     .hi   { color: var(--white); font-weight: 800; }
     .hi-g { color: var(--green); font-weight: 800; }
     .hi-gold { color: var(--gold); font-weight: 800; }
+    .hi-red { color: var(--red); font-weight: 800; }
     .hi-tag {
       display: inline-block;
       background: rgba(22,166,95,0.1);
@@ -87,11 +88,9 @@
       background-clip: text;
     }
 
-    /* scroll fade */
     .fi { opacity: 0; transform: translateY(22px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .fi.v { opacity: 1; transform: translateY(0); }
 
-    /* dark card */
     .dc {
       position: relative;
       background: var(--cb);
@@ -116,7 +115,6 @@
     }
     .icon-box svg { width: 17px; height: 17px; }
 
-    /* CTA button */
     .btn {
       display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
       background: var(--green); color: #fff;
@@ -150,7 +148,7 @@
       color: var(--gold); margin-bottom: 22px;
     }
     .launch-pill svg { width: 11px; height: 11px; }
-    #hero .sub { font-size: clamp(1rem, 2.8vw, 1.15rem); color: var(--z400); max-width: 480px; margin: 16px auto 0; line-height: 1.6; }
+    #hero .sub { font-size: clamp(1rem, 2.8vw, 1.15rem); color: var(--z400); max-width: 520px; margin: 16px auto 0; line-height: 1.65; }
     .vsl-wrap {
       width: 100%;
       margin: 40px auto 0;
@@ -170,10 +168,109 @@
     #dor { background: #060606; border-top: 1px solid var(--brd); border-bottom: 1px solid var(--brd); }
     #dor h2 { text-align: center; margin-bottom: 36px; }
     .pain-grid { display: grid; gap: 10px; }
-    .pain-card { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-left: 3px solid var(--gold); }
-    .pi { width: 34px; height: 34px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(224,169,46,0.06); border: 1px solid rgba(224,169,46,0.18); border-radius: 8px; }
-    .pi svg { width: 15px; height: 15px; color: var(--gold); }
-    .pain-card h3 { color: var(--white); font-size: 0.95rem; font-weight: 700; }
+    .pain-card { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-left: 3px solid var(--red); }
+    .pi { width: 34px; height: 34px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(224,58,46,0.06); border: 1px solid rgba(224,58,46,0.18); border-radius: 8px; }
+    .pi svg { width: 15px; height: 15px; color: var(--red); }
+    .pain-card h3 { color: var(--white); font-size: 0.95rem; font-weight: 700; line-height: 1.4; }
+
+    /* ─── SIMULACAO ─── */
+    #simulacao { background: #000; border-top: 1px solid var(--brd); text-align: center; }
+    #simulacao h2 { margin-bottom: 12px; }
+    #simulacao .tagline { font-size: 1rem; color: var(--z400); max-width: 500px; margin: 0 auto 40px; line-height: 1.6; }
+
+    .calc-card {
+      max-width: 580px; margin: 0 auto 32px;
+      background: linear-gradient(140deg, #080e0b 0%, #040a07 100%);
+      border: 1px solid rgba(22,166,95,0.22); border-radius: var(--rl);
+      overflow: hidden;
+    }
+    .calc-header {
+      padding: 12px 22px; border-bottom: 1px solid rgba(22,166,95,0.12);
+      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--green); text-align: left;
+    }
+    .calc-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 22px; border-bottom: 1px solid rgba(255,255,255,0.04);
+      gap: 12px;
+    }
+    .calc-row:last-child { border-bottom: none; }
+    .calc-label { font-size: 0.85rem; color: var(--z400); text-align: left; flex: 1; }
+    .calc-arrow { color: var(--z700); font-size: 1rem; flex-shrink: 0; }
+    .calc-value { font-size: 1.05rem; font-weight: 800; text-align: right; flex-shrink: 0; }
+    .calc-value.buy { color: var(--red); }
+    .calc-value.sell { color: var(--white); }
+    .calc-value.profit { color: var(--green); }
+    .calc-total {
+      background: rgba(22,166,95,0.06); border-top: 1px solid rgba(22,166,95,0.18);
+      padding: 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .calc-total-label { font-size: 0.88rem; color: var(--z400); text-align: left; }
+    .calc-total-label strong { display: block; font-size: 1rem; color: var(--white); margin-bottom: 2px; }
+    .calc-total-value { font-size: 2.2rem; font-weight: 900; color: var(--green); letter-spacing: -0.03em; white-space: nowrap; }
+
+    /* Grafico de barras */
+    .chart-wrap {
+      max-width: 580px; margin: 0 auto 8px;
+      background: var(--cb); border: 1px solid var(--brd); border-radius: var(--rl);
+      padding: 28px 24px;
+    }
+    .chart-title {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--z500); margin-bottom: 22px; text-align: left;
+    }
+    .chart-bars { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; height: 120px; }
+    .chart-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; justify-content: flex-end; }
+    .chart-bar {
+      width: 100%; border-radius: 6px 6px 0 0;
+      background: linear-gradient(to top, rgba(22,166,95,0.6), rgba(22,166,95,0.25));
+      border: 1px solid rgba(22,166,95,0.3);
+      position: relative;
+      min-height: 8px;
+    }
+    .chart-bar.active {
+      background: linear-gradient(to top, var(--green), rgba(22,166,95,0.7));
+      border-color: rgba(22,166,95,0.6);
+      box-shadow: 0 0 12px rgba(22,166,95,0.3);
+    }
+    .chart-val { font-size: 0.72rem; font-weight: 800; color: var(--green); }
+    .chart-val.active { color: var(--gold); }
+    .chart-lbl { font-size: 0.62rem; color: var(--z500); text-align: center; }
+    .chart-note { font-size: 0.75rem; color: var(--z500); text-align: center; margin-top: 14px; }
+
+    /* ─── MALANDRO vs OTARIO ─── */
+    #malandro { background: #060606; border-top: 1px solid var(--brd); text-align: center; }
+    #malandro h2 { margin-bottom: 8px; }
+    #malandro .sub { font-size: 1rem; color: var(--z400); margin-bottom: 36px; }
+
+    .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 600px; margin: 0 auto; }
+    @media (max-width: 480px) { .vs-grid { grid-template-columns: 1fr; } }
+
+    .vs-card { border-radius: var(--r); overflow: hidden; }
+    .vs-header {
+      padding: 14px 18px;
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      text-align: center;
+    }
+    .vs-header.otario {
+      background: rgba(224,58,46,0.1); border-bottom: 1px solid rgba(224,58,46,0.2);
+      color: var(--red);
+    }
+    .vs-header.malandro {
+      background: rgba(22,166,95,0.1); border-bottom: 1px solid rgba(22,166,95,0.2);
+      color: var(--green);
+    }
+    .vs-body { background: var(--cb); border: 1px solid var(--brd); border-top: none; }
+    .vs-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 13px 16px; border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.83rem; line-height: 1.4; text-align: left;
+    }
+    .vs-item:last-child { border-bottom: none; }
+    .vs-icon { font-size: 0.85rem; flex-shrink: 0; margin-top: 1px; }
+    .vs-item.lose { color: var(--z500); }
+    .vs-item.win { color: var(--z400); }
+    .vs-item.win strong { color: var(--green); }
 
     /* ─── SOLUCAO ─── */
     #solucao { background: #000; text-align: center; }
@@ -195,7 +292,7 @@
     .benefits-grid { display: grid; gap: 8px; }
     @media (min-width: 500px) { .benefits-grid { grid-template-columns: 1fr 1fr; } }
     .benefit-card { padding: 16px; display: flex; gap: 12px; align-items: center; }
-    .benefit-card h3 { color: var(--white); font-size: 0.9rem; }
+    .benefit-card h3 { color: var(--white); font-size: 0.9rem; line-height: 1.4; }
 
     /* ─── PARA QUEM ─── */
     #para-quem { background: #000; border-top: 1px solid var(--brd); text-align: center; }
@@ -237,7 +334,16 @@
     }
     #oferta h2 { margin-bottom: 36px; }
 
-    /* includes stack */
+    .roi-strip {
+      max-width: 520px; margin: 0 auto 24px;
+      background: linear-gradient(135deg, rgba(22,166,95,0.06), rgba(224,169,46,0.04));
+      border: 1px solid rgba(22,166,95,0.22); border-radius: var(--r);
+      padding: 16px 22px; display: flex; align-items: center; justify-content: center;
+      gap: 10px; flex-wrap: wrap;
+    }
+    .roi-strip span { font-size: 0.85rem; color: var(--z400); }
+    .roi-strip strong { color: var(--green); font-weight: 800; }
+
     .offer-stack {
       max-width: 520px; margin: 0 auto 28px;
       background: var(--cb); border: 1px solid var(--brd); border-radius: var(--rl);
@@ -273,7 +379,6 @@
     .offer-badge.g { background: rgba(22,166,95,0.1); border: 1px solid rgba(22,166,95,0.25); color: var(--green); }
     .offer-badge.gold { background: rgba(224,169,46,0.08); border: 1px solid rgba(224,169,46,0.25); color: var(--gold); }
 
-    /* price hero card */
     .price-hero {
       max-width: 520px; margin: 0 auto 20px;
       background: linear-gradient(140deg, #090e0b 0%, #050a07 100%);
@@ -303,7 +408,6 @@
     .big-price .curr { font-size: 40%; vertical-align: super; font-weight: 700; letter-spacing: 0; }
     .price-note { font-size: 0.76rem; color: var(--z500); margin-top: 10px; position: relative; }
 
-    /* trust strip */
     .trust-strip {
       display: flex; align-items: center; justify-content: center;
       gap: 6px; flex-wrap: wrap; margin-top: 12px;
@@ -328,7 +432,7 @@
     /* ─── CTA FINAL ─── */
     #cta-final { background: #000; border-top: 1px solid var(--brd); text-align: center; padding: 72px 0 84px; }
     #cta-final h2 { margin-bottom: 10px; }
-    #cta-final .sub { color: var(--z400); max-width: 420px; margin: 0 auto; font-size: 0.95rem; }
+    #cta-final .sub { color: var(--z400); max-width: 440px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6; }
     .recap { list-style: none; max-width: 380px; margin: 26px auto 0; display: flex; flex-direction: column; gap: 8px; text-align: left; }
     .recap li { display: flex; gap: 9px; align-items: center; font-size: 0.88rem; color: var(--z400); }
     .ri { width: 18px; height: 18px; flex-shrink: 0; background: var(--green-dim); border: 1px solid rgba(22,166,95,0.22); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
@@ -346,6 +450,8 @@
       #hero { padding: 44px 0 56px; }
       #cta-final { padding: 56px 0 68px; }
       .gbox { padding: 32px 18px; }
+      .calc-row { flex-wrap: wrap; }
+      .chart-bars { height: 90px; }
     }
   </style>
 </head>
@@ -361,13 +467,14 @@
     </div>
 
     <h1>
-      Compre <span class="hi-g">barato.</span><br>
-      Revenda com <span class="gradient-text">lucro real.</span>
+      Todo dia sai um<br>
+      <span class="hi-red">otario</span> e um <span class="hi-g">malandro</span><br>
+      na OLX.
     </h1>
 
     <p class="sub">
-      O metodo para gerar <span class="hi">renda extra</span> revendendo na OLX e marketplaces.<br>
-      <span class="hi-g">Sem experiencia</span> &nbsp;&nbsp;<span class="hi-g">Sem estoque caro</span> &nbsp;&nbsp;<span class="hi-g">R$17</span>
+      Aprenda a <span class="hi">faturar no minimo R$2.000 por mes</span> comprando barato e revendendo com margem real.<br>
+      <span class="hi-g">Sem emprego fixo</span>&nbsp;&nbsp;<span class="hi-g">Sem estoque caro</span>&nbsp;&nbsp;<span class="hi-g">Por so R$17</span>
     </p>
 
     <div class="vsl-wrap">
@@ -378,12 +485,12 @@
 
     <div class="cta-wrap">
       <a href="https://pay.kiwify.com.br/V0ycmTk" class="btn">
-        QUERO COMECAR AGORA
+        QUERO SER O MALANDRO
         <span class="btn-sub">Acesso imediato — Apenas R$17 — Pagamento seguro</span>
       </a>
       <span class="secure">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Compra segura via Kiwify — Garantia de 7 dias
+        Compra segura via Kiwify — Garantia incondicional de 7 dias
       </span>
     </div>
   </div>
@@ -393,29 +500,172 @@
 <!-- ── DOR ── -->
 <section id="dor">
   <div class="container fi">
-    <div class="label" style="text-align:center;">Voce ja se pegou pensando assim?</div>
-    <h2 style="text-align:center;">Voce sabe que <span class="hi-g">da pra vender.</span><br>Mas trava antes de comecar.</h2>
+    <div class="label" style="text-align:center;">Seja honesto com voce mesmo</div>
+    <h2 style="text-align:center;">O dinheiro some antes<br>do mes <span class="hi-red">acabar.</span></h2>
 
     <div class="pain-grid">
       <div class="pain-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
-        <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
-        <h3>Onde <span class="hi-gold">comprar barato</span> de verdade?</h3>
-      </div>
-      <div class="pain-card dc">
-        <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h3>Quanto cobrar <span class="hi-gold">sem perder margem?</span></h3>
+        <h3>O salario cai no dia 5 e <span class="hi-red">some antes do dia 20.</span> Conta, boleto, mercado — nao sobra nada.</h3>
       </div>
       <div class="pain-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-        <h3>E se o produto <span class="hi-gold">nao vender?</span></h3>
+        <h3>Voce ve outros vendendo no celular e <span class="hi-red">fazendo R$3.000 em casa</span> enquanto voce ainda esta esperando o proximo mes.</h3>
       </div>
       <div class="pain-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h3>Sem tempo e <span class="hi-gold">sem capital</span> pra arriscar.</h3>
+        <h3>Voce sabe que precisa de uma renda extra, mas <span class="hi-red">nao sabe por onde comecar</span> sem perder o pouco que tem.</h3>
+      </div>
+      <div class="pain-card dc">
+        <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+        <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h3>Toda vez que tenta vender, <span class="hi-red">trava no preco.</span> Cobra barato demais e nao lucra. Cobra caro demais e nao vende.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SIMULACAO DE LUCRO ── -->
+<section id="simulacao">
+  <div class="container fi">
+    <div class="label" style="text-align:center;">A conta e simples</div>
+    <h2>O dinheiro esta na conta<br>de quem <span class="gradient-text">sabe fazer a conta.</span></h2>
+    <p class="tagline">Veja como funciona na pratica, com numeros reais.</p>
+
+    <!-- Simulacao de produto -->
+    <div class="calc-card">
+      <div class="calc-header">Exemplo real — um produto comum</div>
+      <div class="calc-row">
+        <span class="calc-label">Voce compra no garimpo por</span>
+        <span class="calc-arrow">→</span>
+        <span class="calc-value buy">R$80</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-label">Voce anuncia na OLX por</span>
+        <span class="calc-arrow">→</span>
+        <span class="calc-value sell">R$220</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-label">Seu lucro por produto</span>
+        <span class="calc-arrow">→</span>
+        <span class="calc-value profit">R$140</span>
+      </div>
+      <div class="calc-total">
+        <div class="calc-total-label">
+          <strong>20 produtos por mes</strong>
+          Menos de 1 venda por dia
+        </div>
+        <div class="calc-total-value">R$2.800</div>
+      </div>
+    </div>
+
+    <!-- Grafico de barras -->
+    <div class="chart-wrap">
+      <div class="chart-title">Potencial de faturamento mensal</div>
+      <div class="chart-bars">
+        <div class="chart-col">
+          <span class="chart-val">R$700</span>
+          <div class="chart-bar" style="height: 25%"></div>
+          <span class="chart-lbl">5 prod.</span>
+        </div>
+        <div class="chart-col">
+          <span class="chart-val">R$1.400</span>
+          <div class="chart-bar" style="height: 50%"></div>
+          <span class="chart-lbl">10 prod.</span>
+        </div>
+        <div class="chart-col">
+          <span class="chart-val">R$2.100</span>
+          <div class="chart-bar" style="height: 75%"></div>
+          <span class="chart-lbl">15 prod.</span>
+        </div>
+        <div class="chart-col">
+          <span class="chart-val active">R$2.800</span>
+          <div class="chart-bar active" style="height: 100%"></div>
+          <span class="chart-lbl">20 prod.</span>
+        </div>
+        <div class="chart-col">
+          <span class="chart-val">R$4.200+</span>
+          <div class="chart-bar" style="height: 100%; opacity: 0.4; border-style: dashed;"></div>
+          <span class="chart-lbl">30 prod.</span>
+        </div>
+      </div>
+      <p class="chart-note">*Simulacao baseada em margem de R$140 por produto. Resultados variam.</p>
+    </div>
+
+    <div class="cta-wrap" style="margin-top: 36px;">
+      <a href="https://pay.kiwify.com.br/V0ycmTk" class="btn">
+        QUERO APRENDER A FAZER ISSO
+        <span class="btn-sub">Acesso imediato — Apenas R$17</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── MALANDRO vs OTARIO ── -->
+<section id="malandro">
+  <div class="container fi">
+    <div class="label" style="text-align:center;">Dois tipos de pessoa na OLX</div>
+    <h2>Qual lado voce esta?</h2>
+    <p class="sub">Todo dia alguem compra barato e vende caro. E alguem vende barato sem nem saber.</p>
+
+    <div class="vs-grid">
+      <!-- OTARIO -->
+      <div class="vs-card">
+        <div class="vs-header otario">O Otario</div>
+        <div class="vs-body">
+          <div class="vs-item lose">
+            <span class="vs-icon">✗</span>
+            <span>Vende o produto por R$80 achando que esta cobrando justo</span>
+          </div>
+          <div class="vs-item lose">
+            <span class="vs-icon">✗</span>
+            <span>Nao sabe onde comprar mais barato do que no mercado</span>
+          </div>
+          <div class="vs-item lose">
+            <span class="vs-icon">✗</span>
+            <span>Anuncia do jeito errado e o produto fica parado semanas</span>
+          </div>
+          <div class="vs-item lose">
+            <span class="vs-icon">✗</span>
+            <span>Espera o salario chegar enquanto as contas acumulam</span>
+          </div>
+          <div class="vs-item lose">
+            <span class="vs-icon">✗</span>
+            <span>Acha que nao tem dinheiro pra comecar e nunca comeca</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MALANDRO -->
+      <div class="vs-card">
+        <div class="vs-header malandro">O Malandro</div>
+        <div class="vs-body">
+          <div class="vs-item win">
+            <span class="vs-icon" style="color:var(--green)">✓</span>
+            <span>Compra o mesmo produto por <strong>R$80 e vende por R$220</strong></span>
+          </div>
+          <div class="vs-item win">
+            <span class="vs-icon" style="color:var(--green)">✓</span>
+            <span>Sabe exatamente <strong>onde garimpar</strong> sem sair de casa</span>
+          </div>
+          <div class="vs-item win">
+            <span class="vs-icon" style="color:var(--green)">✓</span>
+            <span>Cria anuncio do jeito certo e <strong>vende em horas</strong></span>
+          </div>
+          <div class="vs-item win">
+            <span class="vs-icon" style="color:var(--green)">✓</span>
+            <span>Faz <strong>R$2.000+ por mes</strong> no tempo livre, no celular</span>
+          </div>
+          <div class="vs-item win">
+            <span class="vs-icon" style="color:var(--green)">✓</span>
+            <span>Comecou com <strong>menos de R$200</strong> e reinvestiu o lucro</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -425,9 +675,9 @@
 <!-- ── SOLUCAO ── -->
 <section id="solucao">
   <div class="container fi" style="text-align:center;">
-    <div class="label">A solucao esta aqui</div>
-    <h2>Um <span class="hi-g">metodo direto</span><br>pra quem quer resultado.</h2>
-    <p class="tagline">Do zero ao primeiro lucro, sem enrolacao.</p>
+    <div class="label">O metodo que muda o jogo</div>
+    <h2>Tudo que o malandro sabe<br><span class="hi-g">agora na sua mao.</span></h2>
+    <p class="tagline">Do zero ao primeiro lucro em dias, sem enrolacao e sem capital alto.</p>
 
     <div class="keywords-row">
       <span class="kw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Onde garimpar</span>
@@ -444,49 +694,49 @@
 <!-- ── BENEFICIOS ── -->
 <section id="beneficios">
   <div class="container fi">
-    <div class="label" style="text-align:center;">O que voce vai aprender</div>
-    <h2 style="text-align:center;">Tudo que voce precisa<br>para <span class="gradient-text">comecar hoje.</span></h2>
+    <div class="label" style="text-align:center;">O que voce vai dominar</div>
+    <h2 style="text-align:center;">O conhecimento que<br>o malandro <span class="gradient-text">nao compartilha.</span></h2>
 
     <div class="benefits-grid">
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
-        <h3>Onde encontrar produtos <span class="hi-g">baratos</span></h3>
+        <h3>Os <span class="hi-g">fontes secretas</span> onde produto barato aparece todo dia</h3>
       </div>
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h3>Calcular <span class="hi-g">margem</span> sem chute</h3>
+        <h3>Como calcular <span class="hi-g">margem real</span> sem chute — e nunca vender no prejuizo</h3>
       </div>
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-        <h3>Criar anuncios que <span class="hi-g">vendem</span></h3>
+        <h3>O anuncio que <span class="hi-g">vende em horas</span>, nao em semanas</h3>
       </div>
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l8.42 8.42 8.42-8.42a5.4 5.4 0 0 0 0-7.65z"/></svg></div>
-        <h3>Negociar para <span class="hi-g">pagar menos</span></h3>
+        <h3>Como negociar para <span class="hi-g">pagar menos</span> do que o preco anunciado</h3>
       </div>
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-        <h3>Escolher produtos de <span class="hi-g">alto giro</span></h3>
+        <h3>Quais produtos tem <span class="hi-g">giro rapido</span> e margem alta na OLX</h3>
       </div>
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-        <h3>Escalar <span class="hi-g">no seu ritmo</span></h3>
+        <h3>Como escalar de <span class="hi-g">R$500 pra R$2.000+</span> reinvestindo o proprio lucro</h3>
       </div>
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Vender <span class="hi-g">mais rapido</span></h3>
+        <h3>O gatilho certo para o <span class="hi-g">comprador fechar rapido</span> sem pechinchar</h3>
       </div>
       <div class="benefit-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-        <h3>Evitar erros que <span class="hi-g">custam dinheiro</span></h3>
+        <h3>Os erros que <span class="hi-g">te fazem perder dinheiro</span> sem nem perceber</h3>
       </div>
     </div>
 
@@ -508,14 +758,14 @@
 <section id="para-quem">
   <div class="container fi">
     <div class="label">Este guia e pra voce se</div>
-    <h2>Voce se <span class="hi-g">identifica</span><br>com algum desses?</h2>
+    <h2>Se voce se ver aqui,<br><span class="hi-g">nao tem mais desculpa.</span></h2>
 
     <ul class="aud-list">
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Quer uma <span class="hi">&nbsp;renda extra&nbsp;</span> e nao sabe por onde comecar</li>
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tem <span class="hi">&nbsp;pouco capital&nbsp;</span> e nao pode arriscar errar</li>
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ja tentou vender mas travou no <span class="hi">&nbsp;preco ou produto</span></li>
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tem <span class="hi">&nbsp;pouco tempo&nbsp;</span> disponivel por dia</li>
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Quer um <span class="hi">&nbsp;metodo pratico&nbsp;</span> sem enrolacao</li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Voce esta <span class="hi">&nbsp;cansado de ver o saldo negativo&nbsp;</span> e nao tem uma segunda fonte de renda</li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Voce tem <span class="hi">&nbsp;menos de R$200 pra comecar&nbsp;</span> e nao pode errar</li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Voce ja tentou vender mas travou no <span class="hi">&nbsp;preco ou nao sabia o que vender</span></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Voce so tem <span class="hi">&nbsp;1 a 2 horas por dia&nbsp;</span> livres e quer usar isso pra lucrar</li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Voce quer um <span class="hi">&nbsp;metodo direto&nbsp;</span> — sem enrolacao, sem guru, sem promessa vazia</li>
     </ul>
   </div>
 </section>
@@ -524,29 +774,29 @@
 <!-- ── OBJECOES ── -->
 <section id="objecoes">
   <div class="container fi">
-    <div class="label" style="text-align:center;">Sem desculpas</div>
-    <h2 style="text-align:center;">Suas duvidas,<br><span class="hi-g">respondidas agora.</span></h2>
+    <div class="label" style="text-align:center;">Chega de desculpa</div>
+    <h2 style="text-align:center;">Cada desculpa que voce<br>arruma, <span class="hi-red">o malandro lucra.</span></h2>
 
     <div class="faq-list">
       <div class="faq-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
-        <div class="faq-q"><span class="qi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>"Nao tenho dinheiro para estoque."</div>
-        <div class="faq-a">O guia comeca com <span class="hi-g">pouco capital</span>, priorizando produtos baratos e de giro rapido. Voce testa antes de apostar.</div>
+        <div class="faq-q"><span class="qi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>"Nao tenho dinheiro para comecar."</div>
+        <div class="faq-a">O metodo comeca com <span class="hi-g">menos de R$200</span>. Voce compra 2 produtos, vende os 2, e reinveste o lucro. Nao precisa de estoque de loja.</div>
       </div>
       <div class="faq-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
-        <div class="faq-q"><span class="qi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>"Nunca vendi nada na vida."</div>
-        <div class="faq-a">O conteudo foi feito para quem esta no <span class="hi-g">zero absoluto</span>. Se voce sabe usar um celular, consegue aplicar.</div>
+        <div class="faq-q"><span class="qi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>"Nunca vendi nada, nao sei por onde comecar."</div>
+        <div class="faq-a">O guia foi feito para quem esta no <span class="hi-g">zero absoluto</span>. Se voce sabe usar o WhatsApp, voce consegue aplicar isso hoje.</div>
       </div>
       <div class="faq-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
         <div class="faq-q"><span class="qi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>"Trabalho o dia todo, nao tenho tempo."</div>
-        <div class="faq-a">O metodo funciona nos <span class="hi-g">momentos livres</span> que voce ja tem. Sem virar escravo, sem largar o emprego.</div>
+        <div class="faq-a">Isso e feito nos <span class="hi-g">momentos livres</span>. Voce anuncia pelo celular, negocia pelo WhatsApp e entrega quando quiser. Nao precisa largar o emprego pra comecar.</div>
       </div>
       <div class="faq-card dc">
         <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
-        <div class="faq-q"><span class="qi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>"E se eu nao conseguir aplicar?"</div>
-        <div class="faq-a"><span class="hi-g">7 dias de garantia</span> incondicional. Nao gostou, devolvo 100% do seu dinheiro. Sem perguntas.</div>
+        <div class="faq-q"><span class="qi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>"E se eu gastar R$17 e nao gostar?"</div>
+        <div class="faq-a"><span class="hi-g">7 dias de garantia total.</span> Se nao gostar por qualquer motivo, devolvo 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco e zero.</div>
       </div>
     </div>
   </div>
@@ -557,7 +807,13 @@
 <section id="oferta">
   <div class="container fi">
     <div class="label" style="text-align:center;">Oferta de lancamento</div>
-    <h2>Tudo isso por<br><span class="gradient-text">apenas R$17.</span></h2>
+    <h2>Voce gasta <span class="hi-red">R$17.</span><br>O retorno pode ser <span class="gradient-text">R$2.000+.</span></h2>
+
+    <!-- ROI strip -->
+    <div class="roi-strip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="color:var(--green)"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      <span>Investimento: <strong>R$17</strong>&nbsp; · &nbsp;Potencial de retorno: <strong>R$2.000+ por mes</strong>&nbsp; · &nbsp;Risco: <strong>Zero (garantia de 7 dias)</strong></span>
+    </div>
 
     <!-- O que voce leva -->
     <div class="offer-stack">
@@ -570,7 +826,7 @@
         <div class="offer-text">
           <div class="offer-tag g">Principal</div>
           <div class="offer-name">Garimpo que Da Lucro</div>
-          <div class="offer-desc">Ebook completo — do basico ao avancado</div>
+          <div class="offer-desc">Guia completo — do primeiro R$1 aos R$2.000+ por mes</div>
         </div>
         <span class="offer-badge g">Incluido</span>
       </div>
@@ -612,7 +868,7 @@
       <div class="label" style="text-align:center;">Risco zero</div>
       <h2>Garantia Incondicional<br>de <span class="hi-g">7 Dias</span></h2>
       <p>
-        Voce tem <strong>7 dias completos</strong> para explorar o conteudo. Se nao gostar por qualquer motivo, devolvo <strong>100% do seu dinheiro</strong>. Sem perguntas, sem burocracia, via <strong>Kiwify</strong>.
+        Voce tem <strong>7 dias completos</strong> para explorar o conteudo. Se nao gostar por qualquer motivo — qualquer um — devolvo <strong>100% do seu dinheiro</strong>. Sem perguntas, sem burocracia, direto pelo <strong>Kiwify</strong>. Voce nao tem nada a perder.
       </p>
     </div>
   </div>
@@ -622,19 +878,20 @@
 <!-- ── CTA FINAL ── -->
 <section id="cta-final">
   <div class="container fi">
-    <div class="label" style="text-align:center;">Pronto para comecar?</div>
-    <h2>Metodo claro.<br><span class="gradient-text">Resultado real.</span></h2>
-    <p class="sub">Sem enrolacao, sem promessas falsas. So o que funciona.</p>
+    <div class="label" style="text-align:center;">Cada dia que voce espera e dinheiro que fica na mesa</div>
+    <h2>O malandro ja<br><span class="gradient-text">comecou.</span></h2>
+    <p class="sub">Enquanto voce pensa, alguem aplica esse metodo e embolsa a diferenca. A escolha e simples: continua esperando o salario ou aprende a multiplicar o que voce tem.</p>
 
     <ul class="recap">
-      <li><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ebook completo do basico ao avancado</li>
+      <li><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Metodo para faturar <strong style="color:#fff">no minimo R$2.000 por mes</strong> na OLX</li>
+      <li><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Comece com menos de R$200 de capital</li>
       <li><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Acesso imediato apos o pagamento</li>
-      <li><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Garantia incondicional de 7 dias</li>
+      <li><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Garantia incondicional de 7 dias — risco zero</li>
     </ul>
 
     <div class="cta-wrap" style="margin-top:36px;">
       <a href="https://pay.kiwify.com.br/V0ycmTk" class="btn" style="max-width:520px;">
-        SIM, QUERO COMECAR AGORA
+        SIM, QUERO SER O MALANDRO
         <span class="btn-sub">R$17 — Pagamento unico — Acesso imediato</span>
       </a>
       <span class="secure">
